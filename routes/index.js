@@ -1,6 +1,13 @@
+/*jslint node: true */
+/* globals angular */
+"use strict";
+
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+
+var Event = mongoose.model('Event');
+
 var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
 
@@ -11,16 +18,16 @@ router
     .get('/', function(req, res, next) {
         res.render('index', { title: 'Express' });
     })
-    .get('/posts', function(req, res, next) {
-        Post.find(function (err, posts) {
+    .get('/api/events', function(req, res, next) {
+        Event.find(function (err, events) {
             if(err) {return next(err); }
-            res.json(posts);
+            res.json(events);
         });
     })
-    .get('/posts/:post', function(req, res) {
-        req.post.populate('comments', function (err, post) {
+    .get('/api/events/:event', function(req, res) {
+        req.event.populate('venue', function (err, event) {
             if(err) {return next(err); }
-            res.json(post);
+            res.json(event);
         });
     });
 
@@ -28,7 +35,7 @@ router
 /**
  * POSTs
  */
-router.post('/posts', function(req, res, next) {
+/*router.post('/posts', function(req, res, next) {
     var post = new Post(req.body);
 
     post.save(function (err, post) {
@@ -50,12 +57,12 @@ router.post('/posts/:post/comments', function(req, res, next) {
             res.json(comment);
         });
     })
-});
+});*/
 
 /**
  * PUTs
  */
-router
+/*router
     .put('/posts/:post/upvote', function(req, res, next) {
         req.post.upvote(function (err, post) {
             if(err) { return next(err); }
@@ -73,12 +80,26 @@ router
             if(err) { return next(err); }
             res.json(comment);
         });
-    });
+    });*/
 
 /**
  * PARAMS
  */
-router.param('post', function (req, res, next, id) {
+router.param('event', function (req, res, next, id) {
+    var query = Event.findById(id);
+
+    query.exec(function (err, event) {
+        if(err) { return next(err); }
+
+        if(!event) {
+            return next(new Error('Can\'t find event with id: ' + id));
+        }
+        req.event = event;
+        return next();
+    });
+});
+
+/*router.param('post', function (req, res, next, id) {
     var query = Post.findById(id);
 
     query.exec(function (err, post) {
@@ -104,6 +125,6 @@ router.param('comment', function (req, res, next, id) {
         req.comment = comment;
         return next();
     });
-});
+});*/
 
 module.exports = router;

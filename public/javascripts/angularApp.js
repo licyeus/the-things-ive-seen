@@ -1,8 +1,10 @@
-/**
- * Created by rineharj on 3/10/15.
- */
-var app = angular.module('flapperNews', ['ui.router']);
+/*jslint node: true */
+/* globals angular */
+"use strict";
 
+var app = angular.module('thingsiveseen', ['ui.router']);
+
+/*
 app.factory('posts', ['$http', function ($http) {
     var f = {
         posts: []
@@ -42,33 +44,56 @@ app.factory('posts', ['$http', function ($http) {
     };
     return f;
 }]);
+*/
+
+app.factory('events', ['$http', function ($http) {
+    var f = {
+        events: []
+    };
+    f.get = function (id) {
+        return $http.get('/api/events/'+id).then(function (res) {
+            return res.data;
+        });
+    };
+    f.getAll = function () {
+        return $http.get('/api/events').success(function (data) {
+            angular.copy(data, f.events);
+        });
+    };
+    f.create = function (post) {
+        return $http.post('/api/events', post).success(function (data) {
+            f.events.push(data);
+        });
+    };
+    return f;
+}]);
 
 app.controller('MainCtrl', [
     '$scope',
-    'posts',
-    function ($scope, postFactory) {
-        $scope.posts = postFactory.posts;
+    'events',
+    function ($scope, eventFactory) {
+        $scope.events = eventFactory.events;
 
-        $scope.addPost = function () {
+        /*$scope.addPost = function () {
             if(!$scope.title || $scope.title === '') { return ;}
 
-            postFactory.create({
+            eventFactory.create({
                 title: $scope.title,
                 link: $scope.link
             });
 
             $scope.title = '';
             $scope.link = '';
-        };
+        };*/
 
-        $scope.incrementUpvotes = function(post) {
-            postFactory.upvote(post);
+        /*$scope.incrementUpvotes = function(event) {
+            eventFactory.upvote(event);
         };
-        $scope.decrementUpvotes = function(post) {
-            if(post.upvotes > 0) {
-                postFactory.downvote(post);
+        $scope.decrementUpvotes = function(event) {
+            if(event.upvotes > 0) {
+                eventFactory.downvote(event);
             }
-        };
+        };*/
     }
 ]);
 
@@ -108,10 +133,10 @@ app.config([
                 templateUrl: '/home.html',
                 controller: 'MainCtrl',
                 resolve: {
-                    postPromise: [
-                        'posts',
-                        function(posts) {
-                            return posts.getAll();
+                    eventPromise: [
+                        'events',
+                        function(events) {
+                            return events.getAll();
                         }
                     ]
                 }
