@@ -14,7 +14,8 @@ require('./models/Posts');
 require('./models/Comments');
 require('./models/Event');
 require('./models/Venue');
-mongoose.connect('mongodb://localhost/eventapp-test');
+mongoose.connect(process.env.MONGOLAB_CONN_STR || 'mongodb://localhost/eventapp-test');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
