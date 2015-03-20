@@ -8,7 +8,6 @@ var Event = require('../models/event');
 // middleware to use for all requests
 router.use(function(req, res, next) {
     // do logging
-    console.log('Something is happening.');
     next(); // make sure we go to the next routes and don't stop here
 });
 
@@ -56,6 +55,7 @@ router.route('/events/:event_id')
 
     // get the event with that id (accessed at GET http://localhost:3000/api/events/:event_id)
     .get(function(req, res) {
+
         Event.findById(req.params.event_id, function(err, event) {
             if (err)
                 res.send(err);

@@ -31,8 +31,33 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // db setup
+var generateMongoUrl = function() {
+    // default to a 'localhost' configuration:
+    var connection_string = '127.0.0.1:27017/eventapp';
+
+    // if OPENSHIFT env variables are present, use the available connection info:
+    if (process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
+        connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+            process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+            process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+            process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+            process.env.OPENSHIFT_APP_NAME;
+    }
+    return connection_string;
+};
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/eventapp-test'); // connect to our database
+mongoose.connect(generateMongoUrl(), function(err, conn){
+    if(err) console.log(err);
+    //if(conn) console.log(conn);
+});
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    // yay!
+    console.log('db connection opened', arguments);
+});
+
 
 
 app.use('/', routes);
