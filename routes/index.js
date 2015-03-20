@@ -24,7 +24,7 @@ router
             res.json(events);
         });
     })
-    .get('/api/events/:event', function(req, res) {
+    .get('/api/events/:event', function(req, res, next) {
         req.event.populate('venue', function (err, event) {
             if(err) {return next(err); }
             res.json(event);
