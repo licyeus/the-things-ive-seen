@@ -32,3 +32,6 @@ node_modules
 .idea/tasks.xml
 
 atlassian-ide-plugin.xml
+
+# Bower-managed dependencies
+public/libs/*
