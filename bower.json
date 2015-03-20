@@ -1,12 +1,12 @@
 {
-    "name": "the-things-ive-seen",
-    "version": "0.0.1",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-route": "latest"
-    }
+  "name": "the-things-ive-seen",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "ui-router": "~0.2.13"
+  }
 }
-
