@@ -7,17 +7,21 @@
 </head>
 
 <body ng-app="thingsiveseen">
+<%- include navbar.ejs %>
+
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <ui-view></ui-view>
         </div>
     </div>
+</div>
 
-    <%- include home.ejs %>
-    <%- include events.ejs %>
+<%- include events.ejs %>
+<%- include event.ejs %>
 
-    <script src="/libs/angular/angular.min.js"></script>
-    <script src="/libs/ui-router/release/angular-ui-router.min.js"></script>
-    <script src="/javascripts/angularApp.js"></script>
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/libs/ui-router/release/angular-ui-router.min.js"></script>
+<script src="/javascripts/angularApp.js"></script>
 </body>
 </html>

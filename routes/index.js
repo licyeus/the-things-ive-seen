@@ -7,9 +7,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 var Event = mongoose.model('Event');
-
-var Post = mongoose.model('Post');
-var Comment = mongoose.model('Comment');
+var Venue = mongoose.model('Venue');
 
 /**
  * GETs
