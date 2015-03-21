@@ -10,8 +10,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-require('./models/Posts');
-require('./models/Comments');
 require('./models/Event');
 require('./models/Venue');
 mongoose.connect(process.env.MONGOLAB_CONN_STR || 'mongodb://localhost/eventapp-test');
