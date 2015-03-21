@@ -60,7 +60,55 @@ router.post('/posts/:post/comments', function(req, res, next) {
 /**
  * PUTs
  */
-/*router
+router
+    .put('/api/events/migrate', function(req, res, next) {
+        Event.find(function (err, events) {
+            if(err) {return next(err); }
+
+            var newEvents = events.map(function (event, i, arr) {
+                //Event.create();
+                return Event.schema.statics.fromOldDoc(event._doc);
+            });
+            res.json(newEvents);
+            return;
+            // write to db
+            Event.create(newEvents, function (err) {
+                if(err) { next(err); }
+
+                res.json(newEvents);
+            });
+
+        });
+    })
+    .put('/api/venues/migrate', function(req, res, next) {
+        return;
+
+        Event.find(function (err, events) {
+            if(err) {return next(err); }
+
+            var venues = events.map(function (event, i, arr) {
+
+                if(event._doc.Venue) {
+                    var venue = new Venue({
+                        name: event._doc.Venue,
+                        city: event._doc.City,
+                        state: event._doc.State
+                    });
+
+                    return venue;
+                }
+            });
+
+            // write to db
+            Venue.create(venues, function (err) {
+                if(err) { next(err); }
+
+                res.json(venues);
+            });
+
+        });
+    });
+/*
     .put('/posts/:post/upvote', function(req, res, next) {
         req.post.upvote(function (err, post) {
             if(err) { return next(err); }

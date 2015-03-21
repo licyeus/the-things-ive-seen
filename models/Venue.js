@@ -4,9 +4,9 @@
 var mongoose = require('mongoose');
 
 var VenueSchema = new mongoose.Schema({
-    name: { type: String, default: "" },
-    city: { type: String, default: "" },
-    state: { type: String, default: "" }
+    name: { type: String, default: "", null: false },
+    city: { type: String, default: "", null: false },
+    state: { type: String, default: "", null: false }
 });
 
 mongoose.model('Venue', VenueSchema);

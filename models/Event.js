@@ -2,6 +2,8 @@
 "use strict";
 
 var mongoose = require('mongoose');
+require('./Venue');
+var Venue = mongoose.model('Venue');
 
 /* Sample:
  {
@@ -20,16 +22,46 @@ var mongoose = require('mongoose');
  "faceValue": ""
  },
  */
-var EventSchema = new mongoose.Schema({
+
+mongoose.model('Event', new mongoose.Schema({
     name: { type: String, default: "" },
-    date: { type: String, default: new Date() },
+    date: { type: Date, null: true },
     wasOpener: { type: Boolean, default: false },
-    festivalName: { type: String, default: "" },
+    festivalName: { type: String, default: "", null: true },
     genre: { type: String, default: "" },
-    subGenre: { type: String, default: "" },
-    venue: {type: mongoose.Schema.Types.ObjectId, ref: 'Venue'},
-    faceValue: { type: Number, default: 0 }
+    subGenre: { type: String, default: "", null: true },
+    venue: { type: mongoose.Schema.Types.ObjectId, ref: 'Venue' },
+    faceValue: { type: Number, default: 0.0, null: true }
+}));
+var Event = mongoose.model('Event');
+
+Event.schema.static('fromOldDoc', function (doc) {
+
+    var getFloatPrice = function (priceStr) {
+        if(!priceStr) { return null; }
+
+        priceStr = priceStr.replace('$', '');
+        return parseFloat(priceStr);
+    };
+
+    var newEvent = new Event({
+        name: doc.Name,
+        date: doc.Date ? new Date(doc.Date) : null,
+        wasOpener: doc.WasOpener !== "" ? false : !!doc.WasOpener,
+        festivalName: doc.FestivalName || null,
+        genre: doc.Genre,
+        subGenre: doc.SubGenre || null,
+        venue: new Venue({
+            name: doc.Venue,
+            city: doc.City,
+            state: doc.State
+        }),
+        faceValue: getFloatPrice(doc.FaceValue)
+    });
+
+    return newEvent;
 });
+
 
 /*
 EventSchema.methods.upvote = function (cb) {
@@ -38,4 +70,3 @@ EventSchema.methods.upvote = function (cb) {
 };
 */
 
-mongoose.model('Event', EventSchema);
