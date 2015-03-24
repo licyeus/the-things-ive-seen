@@ -53,7 +53,17 @@ router
                 var values = row.split('\t');
                 var event = {};
                 for (var i = 0; i < values.length; i++) {
-                    event[keys[i]] = values[i];
+                    var key = keys[i];
+                    var val = values[i];
+
+                    switch (key) {
+                        case "wasOpener":
+                            event[key] = val === "1";
+                            break;
+                        default:
+                            event[key] = val;
+                            break;
+                    }
                 }
                 events.push(event);
             });

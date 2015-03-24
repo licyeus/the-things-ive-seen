@@ -1,5 +1,22 @@
 <script type="text/ng-template" id="/event.html">
     <div class="page-header">
-        <h1>{{event.name}}</h1>
+        <h1>{{event.name}} <sup ng-if="event.wasOpener">OPENER</sup></h1>
+        <h2 ng-if="event.genre"><span class="event-genre">{{event.genre}}</span>
+            <span ng-if="event.subGenre" class="separator">/</span>
+            <span ng-if="event.subGenre" class="event-subgenre">{{event.subGenre}}</span>
+        </h2>
+    </div>
+
+    <div>
+        <time class="event-date" datetime="{{event.date}}">{{event.date | date:'MMMM dd, yyyy'}}</time>
+
+        <div ng-if="event.festivalName">{{event.festivalName}}</div>
+
+        <div class="event-cost" ng-if="event.faceValue">{{event.faceValue|currency}}</div>
+
+        <div ng-if="event.venueName">
+            <h2><span class="venue-name">{{event.venueName}}</span> &mdash;
+                <span class="venue-location">{{event.venueCity}}, {{event.venueState}}</span></h2>
+        </div>
     </div>
 </script>
