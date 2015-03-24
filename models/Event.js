@@ -7,19 +7,7 @@ var Venue = mongoose.model('Venue');
 
 /* Sample:
  {
- "_id": "54114e98c9afdd5f9db37e45",
- "date": "09/03/95",
- "name": "Ramones",
- "wasOpener": "",
- "festivalName": "Bumbershoot",
- "genre": "Music",
- "subGenre": "Punk",
- "venue": {
-     "name": "Memorial Stadium",
-     "city": "Seattle",
-     "state": "WA",
- },
- "faceValue": ""
+
  },
  */
 
@@ -30,8 +18,11 @@ mongoose.model('Event', new mongoose.Schema({
     festivalName: { type: String, default: "", null: true },
     genre: { type: String, default: "" },
     subGenre: { type: String, default: "", null: true },
-    venue: { type: mongoose.Schema.Types.ObjectId, ref: 'Venue' },
-    faceValue: { type: Number, default: 0.0, null: true }
+    //venue: { type: mongoose.Schema.Types.ObjectId, ref: 'Venue' },
+    venueName: { type: String, default: "", null: false },
+    venueCity: { type: String, default: "", null: false },
+    venueState: { type: String, default: "", null: false },
+    faceValue: { type: Number, default: null }
 }));
 var Event = mongoose.model('Event');
 
@@ -51,11 +42,9 @@ Event.schema.static('fromOldDoc', function (doc) {
         festivalName: doc.FestivalName || null,
         genre: doc.Genre,
         subGenre: doc.SubGenre || null,
-        venue: new Venue({
-            name: doc.Venue,
-            city: doc.City,
-            state: doc.State
-        }),
+        venueName: doc.Venue,
+        venueCity: doc.City,
+        venueState: doc.State,
         faceValue: getFloatPrice(doc.FaceValue)
     });
 

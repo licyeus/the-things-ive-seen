@@ -1,0 +1,197 @@
+date	name	wasOpener	festivalName	genre	subGenre	venueName	venueCity	venueState	faceValue
+06/29/07	3 Inches of Blood	FALSE		Music	Metal	El Corazon	Seattle	WA	12.00
+02/04/08	3 Inches of Blood	TRUE		Music	Metal	El Corazon	Seattle	WA	15.00
+06/15/12	3 Inches of Blood	TRUE		Music	Metal	Neumos	Seattle	WA	15.00
+05/21/10	Adam Carolla	FALSE		Comedy	Standup	Laugh's Comedy Spot	Kirkland	WA	35.00
+04/20/13	AMA Supercross	FALSE		Sports	Motorcycle	CenturyLink Field	Seattle	WA	15.00
+04/21/98	America	FALSE		Music	Folk	Tacoma Dome	Tacoma	WA	0.00
+09/24/07	Arcade Fire	FALSE		Music	Alternative	Hec Ed Pavilion @ UW	Seattle	WA	39.50
+05/30/10	Band of Horses	FALSE		Music	Alternative	Les Schwab Amphitheater	Bend	OR	35.00
+11/20/07	Band of Horses	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	16.00
+02/05/98	Ben Folds Five	FALSE		Music	Alternative	DV8	Seattle	WA	15.50
+07/13/97	Ben Folds Five	TRUE	H.O.R.D.E. Festival	Music	Alternative	Portland Meadows	Portland	OR	30.00
+10/23/10	Big Boi	FALSE		Music	Hip-hop	Showbox SoDo	Seattle	WA	29.50
+05/24/09	Big Business	FALSE		Music	Metal	Neumos	Seattle	WA	13.00
+12/07/02	Big Lebowski	FALSE		Movie	Comedy	Egyptian Theatre	Seattle	WA	7.75
+11/12/04	Blonde Redhead	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	15.00
+03/26/05	Blue Oyster Cult	FALSE		Music	Rock	Emerald Queen Casino	Tacoma	WA	22.50
+06/13/99	Bob Dylan	FALSE		Music	Folk	The Gorge Amphitheatre	George	WA	74.30
+10/29/07	Born Ruffians	TRUE		Music	Alternative	Neumos	Seattle	WA	10.00
+04/16/10	Brian Regan	FALSE		Comedy	Standup	Paramount Theatre	Seattle	WA	39.50
+08/29/97	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	8.00
+08/30/97	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	8.00
+08/29/97	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	9.00
+09/04/98	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	9.00
+09/05/98	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	9.00
+08/31/01	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	12.00
+09/01/01	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	12.00
+09/02/06	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	30.00
+09/02/13	Bumbershoot	FALSE		Music	Festival	Seattle Center	Seattle	WA	62.00
+09/03/05	Burning Man	FALSE		Festival		Black Rock City	Gerlach	NV	175.00
+08/30/03	Burning Man	FALSE		Festival		Black Rock City	Gerlach	NV	225.00
+09/03/11	Burning Man	FALSE		Festival		Black Rock City	Gerlach	NV	320.00
+05/02/14	C Average	FALSE		Music	Metal	Highline	Seattle	WA	13.00
+08/04/02	Cake	TRUE		Music	Festival	Pier 62/63 on Alaskan Way	Seattle	WA	36.00
+07/25/08	Capitol Hill Block Party	FALSE		Music	Festival		Seattle	WA	17.00
+07/26/08	Capitol Hill Block Party	FALSE		Music	Festival		Seattle	WA	17.00
+10/29/07	Caribou	FALSE		Music	Alternative	Neumos	Seattle	WA	10.00
+10/02/04	Cheap Trick	FALSE		Music	Rock	Emerald Queen Casino	Tacoma	WA	45.00
+11/03/12	Chelsea Peretti	FALSE		Comedy	Standup	Tacoma Comedy Club	Tacoma	WA	27.52
+08/20/11	Chicago Cubs vs. St Louis Cardinals	FALSE		Sports	Baseball	Wrigley Field	Chicago	IL	15.00
+08/21/11	Chicago Cubs vs. St Louis Cardinals	FALSE		Sports	Baseball	Wrigley Field	Chicago	IL	27.00
+05/10/14	Childish Gambino	FALSE		Music	Hip-hop	Paramount Theatre	Seattle	WA	31.25
+11/05/05	Citizen Cope	FALSE		Music		Showbox SoDo	Seattle	WA	0.00
+09/29/07	Clap Your Hands Say Yeah	FALSE		Music	Alternative	Neumos	Seattle	WA	15.00
+08/01/12	Comedy Bang! Bang! Live!	FALSE		Comedy	Standup	Neptune Theatre	Seattle	WA	19.00
+10/02/13	Comedy Bang! Bang! Live!	FALSE		Comedy	Standup	Neptune Theatre	Seattle	WA	23.50
+04/18/10	Conan O'Brian: The Legally Prohibited from Being Funny on Television Tour	FALSE		Comedy	Variety	McCaw Hall	Seattle	WA	57.50
+11/19/00	Dark Star Orchestra	FALSE		Music	Jam	King Cat Theatre	Seattle	WA	20.00
+09/27/02	Dave Chappelle	FALSE		Comedy	Standup	Benaroya Hall	Seattle	WA	32.50
+10/04/13	Dave Chappelle	FALSE		Comedy	Standup	Moore Theatre	Seattle	WA	55.00
+02/11/11	David Alan Grier	FALSE		Comedy	Standup	The Parlor Live	Bellevue	WA	25.00
+08/04/02	De La Soul	TRUE		Music	Festival	Pier 62/63 on Alaskan Way	Seattle	WA	36.00
+05/03/08	Devotchka	FALSE		Music	World	Showbox SoDo	Seattle	WA	19.00
+02/20/12	Die Antwoord	FALSE		Music	Dance	Showbox at the Market	Seattle	WA	20.00
+11/12/08	Digable Planets	FALSE		Music	Hip-hop	Neumos	Seattle	WA	18.00
+12/21/06	Dina Martina Christmas Show	FALSE		Comedy		Re-bar	Seattle	WA	20.00
+09/20/06	DJ Shadow	FALSE		Music	Dance	Showbox at the Market	Seattle	WA	30.00
+10/28/11	Doug Benson	FALSE		Comedy	Standup	Neptune Theatre	Seattle	WA	15.00
+08/12/10	Doug Benson: Trifecta Tour	FALSE		Comedy	Standup	The Parlor Live	Bellevue	WA	25.00
+09/15/12	Edward Sharpe & The Magnetic Zeros	FALSE		Music	Alternative	Marymoor Park	Redmond	WA	35.00
+05/15/00	Eric Idle Exploits Monty Python	FALSE		Comedy	Musical	Paramount Theatre	Seattle	WA	38.00
+06/05/08	Erykah Badu	FALSE		Music	R&B	Marymoor Park	Redmond	WA	38.50
+09/12/13	Everything Is Terrible Live!	FALSE		Comedy		Central Cinema	Seattle	WA	0.01
+02/10/12	Everything Is Terrible: Doggie Woggiez! Poochie Woochie!	FALSE		Comedy		Central Cinema	Seattle	WA	0.01
+12/13/12	Everything Is Terrible: Holiday Tour 2012	FALSE		Comedy		Central Cinema	Seattle	WA	0.01
+11/23/05	Fiona Apple	FALSE		Music	Alternative	Moore Theatre	Seattle	WA	40.00
+10/27/01	Freaknight	FALSE		Music	Dance	Warehouse in SoDo	Seattle	WA	30.00
+01/27/07	Girl Talk	FALSE		Music	Dance	Chop Suey	Seattle	WA	8.00
+09/18/09	Girl Talk	FALSE		Music	Dance	Showbox SoDo	Seattle	WA	15.00
+11/02/10	Gorillaz	FALSE		Music	Electronic	Key Arena	Seattle	WA	64.00
+04/09/07	Grindhouse	FALSE		Movie		Oak Tree Cinemas	Seattle	WA	9.00
+10/05/12	Grizzly Bear	FALSE		Music	Alternative	Paramount Theatre	Seattle	WA	29.00
+09/22/10	Hall & Oates	FALSE		Music	Pop	Puyallup Fair	Puyallup	WA	30.00
+10/25/07	High On Fire	FALSE		Music	Metal	The Crocodile Café	Seattle	WA	16.00
+11/14/06	Hot Chip	FALSE		Music	Dance	Neumos	Seattle	WA	12.00
+11/05/11	Hump!	FALSE		Movie	Adult	On The Boards	Seattle	WA	23.00
+11/09/12	Hump!	FALSE		Film	Adult	SIFF Cinema Uptown	Seattle	WA	23.00
+05/19/11	James Blake	FALSE		Music	Electronic	Tractor Tavern	Seattle	WA	15.00
+12/08/97	Jane's Addiction	FALSE		Music	Alternative	Key Arena	Seattle	WA	25.00
+04/12/13	Jesse Cook	FALSE		Music	World	Moore Theatre	Seattle	WA	37.00
+04/28/12	Jon Benjamin Has a Tour	FALSE		Comedy	Variety	Neumos	Seattle	WA	15.00
+06/10/14	Jungle	FALSE		Music	Dance	Neumos	Seattle	WA	15.00
+01/17/14	Justin Timberlake	FALSE		Music	Pop	Key Arena	Seattle	WA	45.00
+09/04/06	Kanye West	FALSE	Bumbershoot	Music	Hip-hop	Memorial Stadium	Seattle	WA	0.01
+05/02/07	Kings of Leon	FALSE		Music	Alternative	Moore Theatre	Seattle	WA	24.50
+02/09/08	KNDD Presents Lonely Hearts Valentine's Party	FALSE		Music	Alternative	Neumos	Seattle	WA	0.00
+08/21/10	Lady Gaga	FALSE		Music	Pop	Tacoma Dome	Tacoma	WA	85.00
+04/18/12	Laff Hole! F. James Adomian	FALSE		Comedy	Standup	Chop Suey	Seattle	WA	10.00
+09/24/07	LCD Soundsystem	TRUE		Music	Alternative	Hec Ed Pavilion @ UW	Seattle	WA	39.50
+09/27/02	Lewis Black	TRUE		Comedy	Standup	Benaroya Hall	Seattle	WA	32.50
+06/02/12	LMFAO	FALSE		Music	Electronic	Key Arena	Seattle	WA	62.00
+10/17/10	M.I.A.	FALSE		Music	Electronic	Showbox at the Market	Seattle	WA	29.50
+09/12/07	Mariners	FALSE		Sports	Baseball	SafeCo Field	Seattle	WA	37.00
+05/14/14	Mariners vs. Tampa Bay Rays	FALSE		Sports	Baseball	SafeCo Field	Seattle	WA	7.00
+04/22/09	Mastodon	FALSE		Music	Metal	Neumos	Seattle	WA	20.00
+04/20/06	Mates of State	FALSE		Music	Alternative	Neumos	Seattle	WA	13.00
+11/04/13	Mazzy Star	FALSE		Music	Alternative	Neptune Theatre	Seattle	WA	33.50
+05/21/05	MC Chris	FALSE		Music	Hip-hop	El Corazon	Seattle	WA	10.00
+11/11/05	MC Chris	FALSE		Music	Hip-hop	Neumos	Seattle	WA	12.50
+04/01/99	Medeski, Martin & Wood	FALSE		Music	Jazz	Moore Theatre	Seattle	WA	19.00
+06/01/00	Medeski, Martin & Wood	FALSE		Music	Jazz	Moore Theatre	Seattle	WA	22.50
+04/12/01	Medeski, Martin & Wood	FALSE		Music	Jazz	Paramount Theatre	Seattle	WA	26.00
+08/24/07	Mickey Avalon	FALSE		Music	Hip-hop	Neumos	Seattle	WA	15.00
+11/19/99	Modest Mouse	FALSE		Music	Alternative	HUB Ballroom @ UW	Seattle	WA	8.00
+12/21/02	Modest Mouse	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	17.50
+11/04/05	My Morning Jacket	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	18.00
+07/13/97	Neil Young	FALSE	H.O.R.D.E. Festival	Music	Festival	Portland Meadows	Portland	OR	30.00
+09/18/13	Neko Case	FALSE		Music		Paramount Theatre	Seattle	WA	33.25
+05/11/11	Of Montreal	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	23.50
+11/30/10	Passion Pit	FALSE		Music	Pop	Moore Theatre	Seattle	WA	27.50
+06/13/99	Paul Simon	TRUE		Music	Folk	The Gorge Amphitheatre	George	WA	74.30
+07/18/98	Pearl Jam	FALSE		Music	Alternative	Rose Garden Arena	Portland	OR	23.00
+04/19/12	Perfume Genius	FALSE		Music	Alternative	The Crocodile Café	Seattle	WA	10.00
+05/10/11	Peter Bjorn & John	FALSE		Music	Alternative	Neumos	Seattle	WA	20.00
+12/31/99	Phish	FALSE		Music	Jam	Big Cypress	Seminole Indian Reservation	FL	150.00
+10/18/14	Phish	FALSE		Music	Jam	Key Arena	Seattle	WA	60.00
+07/15/98	Phish	FALSE		Music	Jam	Portland Meadows	Portland	OR	26.00
+08/05/09	Phish	FALSE		Music	Jam	Shoreline Amphitheatre	San Francisco	CA	62.35
+07/16/98	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	27.00
+07/17/98	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	27.00
+09/10/99	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	28.75
+09/11/99	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	28.75
+07/12/03	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	43.75
+07/13/03	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	43.75
+08/07/09	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	49.50
+08/08/09	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	49.50
+08/05/11	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	50.00
+08/06/11	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	50.00
+07/26/13	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	50.00
+07/27/13	Phish	FALSE		Music	Jam	The Gorge Amphitheatre	George	WA	50.00
+10/23/11	Portishead	FALSE		Music	Trip-hop	WaMu Theatre	Seattle	WA	48.00
+07/13/97	Primus	TRUE	H.O.R.D.E. Festival	Music	Festival	Portland Meadows	Portland	OR	30.00
+12/18/07	Queens of the Stone Age	FALSE		Music	Rock	Paramount Theatre	Seattle	WA	27.00
+09/12/97	Rage Against The Machine	FALSE		Music	Rock	The Gorge Amphitheatre	George	WA	25.00
+01/07/09	Rebirth Brass Band	FALSE		Music	Jazz	Tractor Tavern	Seattle	WA	17.00
+04/30/02	Reverend Horton Heat	FALSE		Music	Rockabilly	Showbox at the Market	Seattle	WA	17.50
+07/10/09	Reverend Horton Heat	FALSE		Music	Rockabilly	Showbox at the Market	Seattle	WA	22.00
+06/26/14	Robyn + Royksopp	FALSE		Music	Dance	Marymoor Park	Redmond	WA	39.50
+12/14/13	Rufus Wainwright	FALSE		Music		Moore Theatre	Seattle	WA	25.00
+05/29/04	Sasquatch! Festival	FALSE		Music	Festival	The Gorge Amphitheatre	George	WA	49.50
+05/26/07	Sasquatch! Festival	FALSE		Music	Festival	The Gorge Amphitheatre	George	WA	50.00
+05/27/07	Sasquatch! Festival	FALSE		Music	Festival	The Gorge Amphitheatre	George	WA	50.00
+05/23/09	Sasquatch! Festival	FALSE		Music	Festival	The Gorge Amphitheatre	George	WA	56.50
+11/13/04	SeaCompression 2k4: Tranquility Bass	FALSE		Music	Dance	Segway	Seattle	WA	12.00
+08/30/07	Seahawks	FALSE		Sports	Football	CenturyLink Field	Seattle	WA	0.01
+08/22/14	Seahawks	FALSE		Sports	Football	CenturyLink Field	Seattle	WA	55.00
+05/30/10	She & Him	TRUE		Music	Alternative	Les Schwab Amphitheater	Bend	OR	35.00
+08/07/04	Sky Cries Mary	FALSE		Music	Alternative	Fenix Underground	Seattle	WA	12.00
+03/10/06	Sky Cries Mary	FALSE		Music	Alternative	Neumos	Seattle	WA	10.00
+05/09/99	Sky Cries Mary	FALSE		Music	Alternative	The Fenix	Seattle	WA	10.00
+12/03/99	Sky Cries Mary	FALSE		Music	Alternative	The Fenix	Seattle	WA	10.00
+12/13/03	Sleater-Kinney/Cat Power	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	17.50
+05/19/04	Smartypants/Jet City Improv	FALSE		Comedy	Improv	Bathhouse Theatre	Seattle	WA	20.00
+08/15/96	Smashing Pumpkins	FALSE		Music	Alternative	Key Arena	Seattle	WA	25.00
+11/29/06	Sonics vs. Orlando Magic	FALSE		Sports	Basketball	Key Arena	Seattle	WA	0.00
+08/04/07	Sounders	FALSE		Sports	Soccer	Qwest Field	Seattle	WA	0.00
+03/25/11	Sounders vs. Houston Dynamo	FALSE		Sports	Soccer	Qwest Field	Seattle	WA	0.01
+12/17/96	Soundgarden	FALSE		Music	Alternative	Mercer Arena	Seattle	WA	18.00
+10/27/11	Spank Rock	FALSE		Music	Hip-hop	Neumos	Seattle	WA	18.00
+07/13/97	Squirrel Nut Zippers	TRUE	H.O.R.D.E. Festival	Music	Jazz	Portland Meadows	Portland	OR	30.00
+12/28/09	Squirrel Nut Zippers	FALSE		Music	Jazz	Triple Door	Seattle	WA	30.00
+12/08/12	Sufjan Stevens	FALSE		Music	Alternative	Neptune Theatre	Seattle	WA	19.00
+10/15/06	Sufjan Stevens	FALSE		Music	Alternative	Paramount Theatre	Seattle	WA	0.00
+10/22/13	Suicide Girls Tour	FALSE		Dance	Burlesque	El Corazon	Seattle	WA	20.00
+09/18/06	Suicide Girls Tour	FALSE		Dance	Burlesque	Neumos	Seattle	WA	13.00
+04/26/99	Sunny Day Real Estate	FALSE		Music	Alternative	HUB Ballroom @ UW	Seattle	WA	10.00
+12/21/03	Supersuckers	FALSE		Music	Rock	Tractor Tavern	Seattle	WA	12.00
+03/12/14	T-Pain	FALSE		Music	Hip-hop	Neumos	Seattle	WA	30.00
+10/15/05	Teatro Zinzanni	FALSE		Variety Show		Teatro Zinzanni	Seattle	WA	109.00
+07/09/14	The Antlers	FALSE		Music	Alternative	Neumos	Seattle	WA	18.00
+07/21/04	The Aquabats	FALSE		Music	Ska	Graceland	Seattle	WA	13.00
+08/04/02	The Flaming Lips	FALSE		Music	Festival	Pier 62/63 on Alaskan Way	Seattle	WA	36.00
+03/21/08	The Hammer	FALSE		Movie	Comedy	Uptown Cinema	Seattle	WA	9.50
+05/18/07	The Heavenly States	FALSE		Music	Alternative	The Crocodile Café	Seattle	WA	10.00
+06/18/09	The Helio Sequence	FALSE		Music	Alternative	Neumos	Seattle	WA	0.00
+05/15/08	The Kills	FALSE		Music	Alternative	Neumos	Seattle	WA	12.00
+07/28/03	The Mars Volta	FALSE		Music	Alternative	Showbox at the Market	Seattle	WA	13.50
+12/13/06	The Nutcracker	FALSE		Dance	Ballet	Pacific Northwest Ballet	Seattle	WA	0.01
+09/03/95	The Ramones	FALSE	Bumbershoot	Music	Punk	Memorial Stadium	Seattle	WA	0.01
+06/05/08	The Roots	TRUE		Music	Hip-hop	Marymoor Park	Redmond	WA	38.50
+04/22/08	The Sword	FALSE		Music	Metal	Neumos	Seattle	WA	10.00
+01/12/09	Tim and Eric Awesome Show Great Job! Tour	FALSE		Comedy		Showbox SoDo	Seattle	WA	25.00
+05/31/04	Tim Robbins	FALSE		Book Signing		Village Books	Bellingham	WA	0.00
+11/08/01	Tool	FALSE		Music	Rock	Tacoma Dome	Tacoma	WA	38.50
+09/11/98	Tori Amos	FALSE		Music		Key Arena	Seattle	WA	27.50
+05/21/02	Trey Anastasio	FALSE		Music	Jam	Paramount Theatre	Seattle	WA	33.00
+11/29/05	Trey Anastasio	FALSE		Music	Jam	Paramount Theatre	Seattle	WA	35.50
+09/06/08	TV On The Radio	FALSE		Music	Alternative	Showbox SoDo	Seattle	WA	11.50
+05/29/09	U.S.E. (United States of Electronica)	FALSE		Music	Dance	Neumos	Seattle	WA	18.00
+06/05/06	Urban Scarecrow	FALSE		Movie		Egyptian Theatre	Seattle	WA	10.00
+06/03/00	USC 4 Year Anniversary	FALSE		Music	Dance	Stadium Exhibition Center	Seattle	WA	33.00
+05/06/00	Violent Femmes	FALSE		Music	Alternative	Moore Theatre	Seattle	WA	19.50
+05/02/12	Washed Out	FALSE		Music	Electronic	Neptune Theatre	Seattle	WA	15.00
+07/15/97	Weezer	FALSE		Music	Alternative	DV8	Seattle	WA	0.01
+07/20/07	Wolves In The Throne Room	FALSE		Music	Metal	Studio 7	Seattle	WA	7.00
+04/28/09	Yann Tiersen	FALSE		Music	Alternative	Neumos	Seattle	WA	15.00
+08/30/12	Yeasayer	FALSE		Music	Alternative	Neptune Theatre	Seattle	WA	29.00

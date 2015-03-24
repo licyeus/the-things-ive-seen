@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var fs = require('fs');
 
 var Event = mongoose.model('Event');
 var Venue = mongoose.model('Venue');
@@ -13,120 +14,64 @@ var Venue = mongoose.model('Venue');
  * GETs
  */
 router
-    .get('/', function(req, res, next) {
-        res.render('index', { title: 'Express' });
+    .get('/', function (req, res, next) {
+        res.render('index', {title: 'Express'});
     })
-    .get('/api/events', function(req, res, next) {
+    .get('/api/events', function (req, res, next) {
         Event.find(function (err, events) {
-            if(err) {return next(err); }
+            if (err) { return next(err); }
+
             res.json(events);
         });
     })
-    .get('/api/events/:event', function(req, res, next) {
+    .get('/api/events/:event', function (req, res, next) {
         req.event.populate('venue', function (err, event) {
-            if(err) {return next(err); }
+            if (err) { return next(err); }
+
             res.json(event);
         });
     });
 
-
 /**
  * POSTs
  */
-/*router.post('/posts', function(req, res, next) {
-    var post = new Post(req.body);
-
-    post.save(function (err, post) {
-        if(err) { return next(err); }
-        res.json(post);
-    })
-});
-
-router.post('/posts/:post/comments', function(req, res, next) {
-    var comment = new Comment(req.body);
-    comment.post = req.post;
-
-    comment.save(function (err, comment) {
-        if(err) { return next(err); }
-
-        req.post.comments.push(comment);
-        req.post.save(function (err, post) {
-            if(err) { return next(err); }
-            res.json(comment);
-        });
-    })
-});*/
-
-/**
- * PUTs
- */
 router
-    .put('/api/events/migrate', function(req, res, next) {
-        Event.find(function (err, events) {
-            if(err) {return next(err); }
+    .post('/api/events/reset', function (req, res, next) {
 
-            var newEvents = events.map(function (event, i, arr) {
-                //Event.create();
-                return Event.schema.statics.fromOldDoc(event._doc);
-            });
-            res.json(newEvents);
-            return;
-            // write to db
-            Event.create(newEvents, function (err) {
-                if(err) { next(err); }
+        // remove all events
+        Event.remove({}, function (err) {
+            if (err) { return next(err); }
 
-                res.json(newEvents);
-            });
+            // repopulate DB with seed data
+            var seedDataEvents = fs.readFileSync('./data/events.tsv', 'utf8').split('\n');
 
-        });
-    })
-    .put('/api/venues/migrate', function(req, res, next) {
-        return;
+            // date,name,wasOpener,festivalName,genre,subGenre,venue,city,state,faceValue
+            var keys = seedDataEvents.shift().split('\t');
+            var events = [];
 
-        Event.find(function (err, events) {
-            if(err) {return next(err); }
-
-            var venues = events.map(function (event, i, arr) {
-
-                if(event._doc.Venue) {
-                    var venue = new Venue({
-                        name: event._doc.Venue,
-                        city: event._doc.City,
-                        state: event._doc.State
-                    });
-
-                    return venue;
+            seedDataEvents.forEach(function (row, idx, arr) {
+                var values = row.split('\t');
+                var event = {};
+                for (var i = 0; i < values.length; i++) {
+                    event[keys[i]] = values[i];
                 }
+                events.push(event);
             });
 
-            // write to db
-            Venue.create(venues, function (err) {
-                if(err) { next(err); }
+            // push to DB
+            Event.create(events, function (err) {
+                if (err) { return next(err); }
 
-                res.json(venues);
+                // return all new Events
+                Event.find(function (err, events) {
+                    if (err) { return next(err); }
+
+                    res.json(events);
+                });
             });
-
         });
     });
-/*
-    .put('/posts/:post/upvote', function(req, res, next) {
-        req.post.upvote(function (err, post) {
-            if(err) { return next(err); }
-            res.json(post);
-        });
-    })
-    .put('/posts/:post/downvote', function(req, res, next) {
-        req.post.downvote(function (err, post) {
-            if(err) { return next(err); }
-            res.json(post);
-        });
-    })
-    .put('/posts/:post/comments/:comment/upvote', function(req, res, next) {
-        req.comment.upvote(function (err, comment) {
-            if(err) { return next(err); }
-            res.json(comment);
-        });
-    });*/
+
 
 /**
  * PARAMS
@@ -135,42 +80,16 @@ router.param('event', function (req, res, next, id) {
     var query = Event.findById(id);
 
     query.exec(function (err, event) {
-        if(err) { return next(err); }
+        if (err) {
+            return next(err);
+        }
 
-        if(!event) {
+        if (!event) {
             return next(new Error('Can\'t find event with id: ' + id));
         }
         req.event = event;
         return next();
     });
 });
-
-/*router.param('post', function (req, res, next, id) {
-    var query = Post.findById(id);
-
-    query.exec(function (err, post) {
-        if(err) { return next(err); }
-
-        if(!post) {
-            return next(new Error('can\'t find post'));
-        }
-        req.post = post;
-        return next();
-    });
-});
-
-router.param('comment', function (req, res, next, id) {
-    var query = Comment.findById(id);
-
-    query.exec(function (err, comment) {
-        if(err) { return next(err); }
-
-        if(!comment) {
-            return next(new Error('can\'t find comment'));
-        }
-        req.comment = comment;
-        return next();
-    });
-});*/
 
 module.exports = router;
