@@ -45,6 +45,13 @@ app.controller('NavCtrl', [
     }
 ]);
 
+app.controller('AdminCtrl', [
+    '$scope',
+    function ($scope) {
+
+    }
+]);
+
 app.controller('EventCtrl', [
     '$scope',
     'eventSvc',
@@ -103,8 +110,13 @@ app.config([
                     ]
                 }
 
+            })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: '/admin.html',
+                controller: 'AdminCtrl'
             });
 
-        $urlRouterProvider.otherwise('home');
+        $urlRouterProvider.otherwise('events');
     }
 ]);
