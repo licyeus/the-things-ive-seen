@@ -14,9 +14,7 @@ app.factory('eventSvc', ['$http', function ($http) {
         });
     };
     f.getAll = function () {
-        return $http.get('/api/events').success(function (data) {
-            angular.copy(data, f.events);
-        });
+        return $http.get('/api/events');
     };
     f.create = function (post) {
         return $http.post('/api/events', post).success(function (data) {
@@ -29,8 +27,8 @@ app.factory('eventSvc', ['$http', function ($http) {
 app.controller('MainCtrl', [
     '$scope',
     'eventSvc',
-    function ($scope, eventSvc) {
-        $scope.events = eventSvc.events;
+    function ($scope, events) {
+        $scope.events = events;
     }
 ]);
 
@@ -88,12 +86,9 @@ app.config([
                 templateUrl: '/events.html',
                 controller: 'MainCtrl',
                 resolve: {
-                    eventPromise: [
-                        'eventSvc',
-                        function(eventSvc) {
-                            return eventSvc.getAll();
-                        }
-                    ]
+                    events: function(eventSvc) {
+                        return eventSvc.getAll();
+                    }
                 }
             })
             .state('event', {
